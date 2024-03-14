@@ -1,0 +1,22 @@
+<div class="w-[47dvw] h-[50dvw] bg-red-100 rounded-lg p-3 m-2 space-y-2">
+  <div>
+    <h1 class="text-3xl font-bold text-gray-800">Liste des specialites</h1>
+  </div>
+  <img src="https://www.expertam.net/wp-content/uploads/2019/10/iStock-893090400.jpg" class="rounded-md w-1/2 mx-auto">
+  <div class="overflow-x-auto border-2 rounded-md">
+    <table class="table-auto w-full">
+      <thead>
+      <tr class="bg-gray-400 text-white uppercase text-sm leading-normal">
+        <th class="py-3 px-6 text-left">Libelle</th>
+        <th class="py-3 px-6 text-left">Id</th>
+      </tr>
+      </thead>
+      <tbody class="text-gray-600 text-sm font-light">
+      <tr *ngFor="let specialite of specialites" class="border-b border-gray-200 hover:bg-gray-100">
+        <td class="py-3 px-6 text-left">{{ specialite._libelle }}</td>
+        <td class="py-3 px-6 text-left">{{ specialite._idSpec }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

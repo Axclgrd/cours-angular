@@ -1,0 +1,36 @@
+<div class="w-[47dvw] h-[50dvw] bg-amber-100 rounded-lg p-3 m-2 space-y-2">
+  <div>
+    <h1 class="text-3xl font-bold text-gray-800">Liste des étudiants</h1>
+  </div>
+  <img src="https://img.freepik.com/photos-gratuite/groupe-multiethnique-jeunes-etudiants-heureux-debout-exterieur_171337-11812.jpg?size=626&ext=jpg&ga=GA1.1.1292351815.1710115200&semt=ais" class="rounded-md w-1/2 mx-auto">
+  <div class="overflow-x-auto border-2 rounded-md">
+    <table class="table-auto w-full">
+      <thead>
+      <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+        <th class="py-3 px-6 text-left">Nom</th>
+        <th class="py-3 px-6 text-left">Prénom</th>
+        <th class="py-3 px-6 text-left">Rue</th>
+        <th class="py-3 px-6 text-left">Code Postal</th>
+        <th class="py-3 px-6 text-left">Ville</th>
+        <th class="py-3 px-6 text-left">Email</th>
+        <th class="py-3 px-6 text-left">Genre</th>
+        <th class="py-3 px-6 text-left">Age</th>
+        <th class="py-3 px-6 text-left">Id</th>
+      </tr>
+      </thead>
+      <tbody class="text-gray-600 text-sm font-light">
+      <tr *ngFor="let etudiant of etudiants" class="border-b border-gray-200 hover:bg-gray-100">
+        <td class="py-3 px-6 text-left">{{ etudiant._nom }}</td>
+        <td class="py-3 px-6 text-left">{{ etudiant._prenom }}</td>
+        <td class="py-3 px-6 text-left">{{ etudiant._rue }}</td>
+        <td class="py-3 px-6 text-left">{{ etudiant._cp }}</td>
+        <td class="py-3 px-6 text-left">{{ etudiant._ville }}</td>
+        <td class="py-3 px-6 text-left">{{ etudiant._courriel }}</td>
+        <td class="py-3 px-6 text-left">{{ etudiant._genre }}</td>
+        <td class="py-3 px-6 text-left">{{ etudiant._age }}</td>
+        <td class="py-3 px-6 text-left">{{ etudiant._idCand }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,78 @@
+<main class="py-14">
+  <div class="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
+    <div class="max-w-lg mx-auto space-y-3 sm:text-center">
+      <h3 class="text-indigo-600 font-semibold">
+        Contact
+      </h3>
+      <p class="text-gray-800 text-3xl font-semibold sm:text-4xl">
+        Restons en contact
+      </p>
+      <p>
+        Nous sommes là pour vous aider et répondre à toutes vos questions. N'hésitez pas à nous contacter.
+      </p>
+    </div>
+    <div class="mt-12 max-w-lg mx-auto">
+      <form
+        [formGroup]="contactForm"
+        (ngSubmit)="onSubmit()"
+        class="space-y-5"
+      >
+        <div class="flex flex-col items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row">
+          <div>
+            <label class="font-medium">
+              First name
+            </label>
+            <input
+              type="text"
+              formControlName="firstName"
+              class="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+            />
+          </div>
+          <div>
+            <label class="font-medium">
+              Last name
+            </label>
+            <input
+              type="text"
+              formControlName="lastName"
+              class="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+            />
+          </div>
+        </div>
+        <div>
+          <label class="font-medium">
+            Email
+          </label>
+          <input
+            type="email"
+            formControlName="email"
+            class="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+          />
+        </div>
+        <div>
+          <label class="font-medium">
+            Message
+          </label>
+          <textarea
+            formControlName="message"
+            class="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"></textarea>
+        </div>
+        <div class="flex space-x-2">
+        <button
+          type="submit"
+          class="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
+        >
+          Submit
+        </button>
+          <button
+            type="button"
+            (click)="clearForm()"
+            class="w-full px-4 py-2 text-white font-medium bg-red-600 hover:bg-red-500 active:bg-red-600 rounded-lg duration-150"
+          >
+            Clear
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
